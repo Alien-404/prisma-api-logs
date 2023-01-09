@@ -40,7 +40,7 @@ cron.schedule('*/8 * * * *', async () => {
 app.get('/', (req, res) => {
   res.status(200).json({
     message: 'this is auto delete logs api with corn',
-    status: 'all-running good!',
+    status: 200,
   });
 });
 
