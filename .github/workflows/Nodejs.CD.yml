@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd ~/docker/nodejs
+            cd ~/docker/nodejs/prisma-api-logs
             git pull origin production
             docker build -t prisma-api .
             docker run -dp 8080:8080 prisma-api
