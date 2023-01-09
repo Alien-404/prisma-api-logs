@@ -66,6 +66,6 @@ app.listen(
   process.env.PORT || 8080,
   process.env.HOSTNAME || 'localhost',
   (req, res) => {
-    console.log(`Server running ${BASE_URL}`);
+    console.log(`Server running ${BASE_URL} - success`);
   }
 );
