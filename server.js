@@ -43,12 +43,14 @@ app.get('/', (req, res) => {
   });
 });
 
+// check status
 app.get('/status', (req, res) => {
   res.status(200).json({
     message: 'healty',
   });
 });
 
+// show logs data
 app.get('/logs', async (req, res) => {
   const logs = await prisma.api_logs.findMany();
   res.status(200).json({
