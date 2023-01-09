@@ -54,7 +54,7 @@ jobs:
         with:
           registry: ghcr.io
           username: Alien-404
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GRDC_TOKEN }}
 
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
