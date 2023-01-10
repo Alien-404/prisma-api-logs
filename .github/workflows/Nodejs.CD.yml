@@ -34,5 +34,6 @@ jobs:
             git pull origin production
             docker build -t prisma-api .
             docker stop api_logs
+            docker rm api_logs
             docker run --name api_logs -dp 8080:8080 prisma-api
             
