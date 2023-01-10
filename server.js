@@ -31,7 +31,7 @@ app.use(async (req, res, next) => {
 });
 
 // cron
-cron.schedule('*/8 * * * *', async () => {
+cron.schedule('*/10 * * * *', async () => {
   await prisma.api_logs.deleteMany({});
   console.log('logs cleared');
 });
@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
 // check status
 app.get('/status', (req, res) => {
   res.status(200).json({
-    message: 'healty',
+    message: 'server is healty',
     status: 200,
   });
 });
